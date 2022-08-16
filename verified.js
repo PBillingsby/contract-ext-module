@@ -1,4 +1,4 @@
-export async function verified(state, action) {
+export async function verified() {
   const state = await SmartWeave.contracts.readContractState("ZGaL5DOMIYRw9YHZ_NZ2JoIjST1QwhiD6T1jePH381I").readState();
   const verifiedAddresses = state.votes
     .filter(vote => vote.status === 'passed')
